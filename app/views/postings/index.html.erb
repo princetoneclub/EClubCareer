@@ -1,5 +1,7 @@
 <h1>Listing Postings</h1>
 
+<%= will_paginate @postings %>
+
 <table>
   <thead>
     <tr>
@@ -9,16 +11,16 @@
     </tr>
   </thead>
 
-<% @postings.each do |posting| %>
-  <tr>
-    <td><%= posting.title %></td>
-    <td><%= posting.location %></td>
-    <td><%= link_to 'Show', posting %></td>
-  </tr>
-<% end %>
-</table>
+  <% @postings.each do |posting| %>
+    <tr>
+      <td><%= posting.title %></td>
+      <td><%= posting.location %></td>
+      <td><%= link_to 'Show', posting %></td>
+    </tr>
+    <% end %>
+  </table>
 
-<br>
 <!--
+<br>
 <e= link_to 'New User', new_user_path %>
 -->
