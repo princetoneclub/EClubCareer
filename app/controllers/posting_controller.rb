@@ -1,0 +1,2 @@
+class PostingController < ApplicationController
+end
