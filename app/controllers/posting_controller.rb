@@ -10,5 +10,5 @@ class PostingController < ApplicationController
 
   def index
   end
-  
+
 end
