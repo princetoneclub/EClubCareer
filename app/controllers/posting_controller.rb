@@ -10,6 +10,7 @@ class PostingController < ApplicationController
   end
 
   def index
+    @postings = Posting.all
   end
 
 end
