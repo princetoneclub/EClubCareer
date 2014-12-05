@@ -1,5 +1,6 @@
-class PostingController < ApplicationController
+class PostingsController < ApplicationController
   def new
+    @posting = Posting.new
   end
 
   def create

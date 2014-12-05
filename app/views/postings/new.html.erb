@@ -1,0 +1,7 @@
+new.html.erb
+
+<%= form_for(@posting) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, :autofocus => true %>
+  <%= f.button :submit %>
+<% end %> 
