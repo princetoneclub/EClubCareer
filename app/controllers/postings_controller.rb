@@ -4,6 +4,14 @@ class PostingsController < ApplicationController
   end
 
   def create
+    @posting = Posting.new(posting_params)
+
+    if @posting.save
+      flash[:notice] = "Event Created!"
+      redirect_to confirmation_path(@posting)
+    else 
+      render 'new'
+    end
   end
 
   def show
@@ -14,4 +22,9 @@ class PostingsController < ApplicationController
     @postings = Posting.all
   end
 
+
+  private
+    def posting_params
+      params.require(:posting).permit(:title, :location, :ptype, :description, :deadline)
+    end
 end
