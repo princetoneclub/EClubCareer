@@ -20,7 +20,21 @@
     <% end %>
   </table>
 
-<!--
+=
+<%= form_tag postings_path, :method => 'get' do %>
+      <p>
+      <%= text_field_tag :search %>
+      <div class="form_row">
+      <label for="ptype">Position Type:</label>
+        <% [ 'internship', 'full_time', 'part_time'].each do |ptype| %>
+          <br>
+          <%= radio_button_tag 'ptype', ptype, @ptype == ptype %>
+          <%= ptype.humanize %>
+        <% end %>
+      </div>
+      <%= submit_tag "search" %>
+       </p>
+<% end %>
+
+
 <br>
-<e= link_to 'New User', new_user_path %>
--->
