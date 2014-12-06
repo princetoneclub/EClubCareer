@@ -12,28 +12,27 @@
   </thead>
 
   <% @postings.each do |posting| %>
-    <tr>
-      <td><%= posting.title %></td>
-      <td><%= posting.location %></td>
-      <td><%= link_to 'Show', posting %></td>
-    </tr>
-    <% end %>
-  </table>
+  <tr>
+    <td><%= posting.title %></td>
+    <td><%= posting.location %></td>
+    <td><%= link_to 'Show', posting %></td>
+  </tr>
+  <% end %>
+</table>
 
-=
 <%= form_tag postings_path, :method => 'get' do %>
-      <p>
-      <%= text_field_tag :search %>
-      <div class="form_row">
-      <label for="ptype">Position Type:</label>
-        <% [ 'internship', 'full_time', 'part_time'].each do |ptype| %>
-          <br>
-          <%= radio_button_tag 'ptype', ptype, @ptype == ptype %>
-          <%= ptype.humanize %>
-        <% end %>
-      </div>
-      <%= submit_tag "search" %>
-       </p>
+  <p>
+    <%= text_field_tag :search %>
+    <div class="form_row">
+      <%= label_tag :ptype, "Position Type:" %>
+      <% [ 'internship', 'full_time', 'part_time'].each do |ptype| %>
+      <br>
+      <%= radio_button_tag 'ptype', ptype, @ptype == ptype %>
+      <%= ptype.humanize %>
+      <% end %>
+    </div>
+    <%= submit_tag "search" %>
+  </p>
 <% end %>
 
 
