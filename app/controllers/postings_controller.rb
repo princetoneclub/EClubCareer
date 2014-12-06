@@ -19,10 +19,8 @@ class PostingsController < ApplicationController
   end
 
   def index
-    @postings = Posting.paginate(:page => params[:page], :per_page => 5)
+    @postings = Posting.search(params).paginate(:page => params[:page], :per_page => 5)
   end
-
-
   private
     def posting_params
       params.require(:posting).permit(:title, :location, :ptype, :description, :deadline)
