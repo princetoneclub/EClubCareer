@@ -13,8 +13,8 @@ describe "Postings Pages" do
         fill_in "Title", with: "Random Title"
         fill_in "Location", with: "New Jersey"
         fill_in "Description", with: "Sample Description"
-        fill_in "Deadline", with: Time.now()
-        fill_in "Type", with: "Internship"
+        # fill_in "Deadline", with: Time.now()
+        fill_in "Ptype", with: "Internship"
       end
       
       it "should create a posting" do
