@@ -21,5 +21,13 @@ describe "Postings Pages" do
         expect { click_button submit }.to change(Posting, :count)
       end
     end
+
+    describe "with invalid information" do
+      describe "no input" do
+        it "should create a posting" do
+          expect { click_button submit }.to_not change(Posting, :count)
+        end
+      end
+    end
   end
 end
