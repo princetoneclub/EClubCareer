@@ -15,6 +15,10 @@
   <tr>
     <td><%= posting.title %></td>
     <td><%= posting.location %></td>
+    <td> <%= truncate posting.description, length: 100 %> </td>
+    <td><%= posting.ptype %></td>
+    <td><%= posting.deadline%></td>
+    <td><%= posting.created_at %></td>
     <td><%= link_to 'Show', posting %></td>
   </tr>
   <% end %>
