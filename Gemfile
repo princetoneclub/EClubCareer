@@ -41,7 +41,9 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 # Bootstrap
-gem 'Bootstrap'
+gem "therubyracer"
+gem "less-rails"
+gem "twitter-bootstrap-rails"
 
 # for heroku
 group :production do
