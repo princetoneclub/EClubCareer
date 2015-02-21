@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  root 'static_pages#home'
+  root 'postings#index'
 
-  resources :postings, only: [:new, :create, :show, :index]
+  resources :postings, only: [:new, :create, :show]
 
 
      get 'confirmation' => 'static_pages#confirmation'
