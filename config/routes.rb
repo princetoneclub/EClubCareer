@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
   root 'postings#index'
 
-  resources :postings, only: [:new, :create, :show]
+  resources :postings, only: [:create, :show]
+
 
 
      get 'confirmation' => 'static_pages#confirmation'
+     get 'submit' => 'postings#new'
+     get 'search' => 'postings#search'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
