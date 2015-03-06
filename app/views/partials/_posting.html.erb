@@ -1,0 +1,25 @@
+<div class="posting">
+	<div class="postingLeft"> 
+		<div class="title">
+			<b><%= posting.title %></b>
+		</div>
+
+		<div class="description line-clamp">
+			<%= posting.description.truncate(80, separator: ' ') %>
+		</div>
+
+		<div>
+			<div class="tagBox">
+				<%= posting.ptype %>
+			</div>
+		</div>	
+	</div>	
+
+	<div class="location">
+		<%= posting.location %>
+	</div>
+
+	<div class="date">
+		<%= "2234" %>
+	</div>
+</div>
