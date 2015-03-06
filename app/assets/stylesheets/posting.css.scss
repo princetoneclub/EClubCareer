@@ -1,3 +1,40 @@
-// Place all the styles related to the Posting controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.posting {
+	height: 100px;
+}
+
+.postingLeft {
+	position: relative;
+	display: inline-block;
+	width: 300px;
+	height: 100px;
+}
+
+.title {
+	height: 30px;	
+}
+
+.description {
+	height: 45px;	
+}
+
+.tagBox {
+	text-align: center;
+	width: 75px;
+	background-color: #ddd;
+}
+
+.location {
+	display: inline-block;
+	width: 150px;
+	height: 100px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.date {
+	display: inline-block;
+	width: 50px;
+	height: 100px;
+	text-align: center;
+	vertical-align: middle;
+}
