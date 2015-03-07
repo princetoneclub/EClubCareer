@@ -1,7 +1,15 @@
 @import "defaults";
 
+.postings-all {
+	border-style: solid;
+	border-width: 1px; 
+	border-color: $light_gray;
+	width: 600px;
+}
+
 .posting {
 	height: 100px;
+	background-color: $lightest_gray;
 }
 
 .posting-left {
@@ -18,11 +26,23 @@
 .posting-description {
 	height: 45px;	
 }
-
-.posting-tagBox {
+ 
+.posting-tagbox {
 	text-align: center;
 	width: 75px;
-	background-color: #ddd;
+	border-radius: 8px;
+}
+
+.full_time {
+	background-color: #F66F65;
+}
+
+.part_time {
+	background-color: #65A9F6;
+}
+
+.internship {
+	background-color: #F6D465;
 }
 
 .posting-location {
@@ -33,9 +53,10 @@
 	vertical-align: middle;
 }
 
+
 .posting-date {
 	display: inline-block;
-	width: 50px;
+	width: 125px;
 	height: 100px;
 	text-align: center;
 	vertical-align: middle;
