@@ -1,23 +1,6 @@
 <h1>Search Postings</h1>
 
-<div class="search-box">
-  <%= form_tag("/", method: "get") do %>
-    <%= label_tag(:title, "Title:") %>
-    <%= text_field_tag(:title) %> <br> <br>
-
-    <%= label_tag(:ptype, "Opportunity Type") %> <br>
-    <%= label_tag(:ptype, "Full Time") %>
-    <%= check_box(:ptype, "full_time") %>
-    <%= label_tag(:ptype, "Part Time") %>
-    <%= check_box(:ptype, "part_time") %>
-    <%= label_tag(:ptype, "Internship") %>
-    <%= check_box(:ptype, "internship") %> <br> <br>
-
-    <%= label_tag(:location, "Location:") %>
-    <%= text_field_tag(:location) %>  <br>  
-    <%= submit_tag("Search", :class => 'btn btn-large btn-primary') %>
-  <% end %>
-</div>
+<%= render partial: 'partials/search' %>
 
 <h1>Listing Postings</h1>
 
