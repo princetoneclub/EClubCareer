@@ -1,27 +1,25 @@
-<div class="postings-all">
-	<div class="posting">
-		<div class="posting-left"> 
-			<div class="posting-title">
-				<b><%= posting.title %></b>
-			</div>
-
-			<div class="posting-description line-clamp">
-				<%= posting.description.truncate(80, separator: ' ') %>
-			</div>
-
-			<div>
-				<div class="posting-tagbox <%= posting.ptype %>">
-					<%= get_opportunity_type(posting.ptype) %>
-				</div>
-			</div>
-		</div>	
-
-		<div class="posting-location">
-			<%= posting.location %>
+<div class="posting">
+	<div class="posting-left"> 
+		<div class="posting-title">
+			<b><%= posting.title %></b>
 		</div>
 
-		<div class="posting-date">
-			<%= posting.deadline.to_date.to_formatted_s(:long_ordinal) %>
+		<div class="posting-description line-clamp">
+			<%= posting.description.truncate(80, separator: ' ') %>
 		</div>
+
+		<div>
+			<div class="posting-tagbox <%= posting.ptype %>">
+				<%= get_opportunity_type(posting.ptype) %>
+			</div>
+		</div>
+	</div>	
+
+	<div class="posting-location">
+		<%= posting.location %>
+	</div>
+
+	<div class="posting-date">
+		<%= posting.deadline.to_date.to_formatted_s(:long_ordinal) %>
 	</div>
 </div>

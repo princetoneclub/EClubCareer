@@ -1,15 +1,13 @@
 @import "defaults";
 
-.postings-all {
-	border-style: solid;
-	border-width: 1px; 
-	border-color: $light_gray;
-	width: 600px;
-}
 
 .posting {
 	height: 100px;
 	background-color: $lightest_gray;
+	border-style: solid;
+	border-width: 1px; 
+	border-color: $light_gray;
+	width: 600px;
 }
 
 .posting-left {
