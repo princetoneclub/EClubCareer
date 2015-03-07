@@ -1,21 +1,45 @@
+<head>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <link rel="stylesheet" href="/stylesheets/dropdown.css">
+  
+  <script>
+  $(function() {
+    $( "#datepicker" ).datepicker();
+  });
+  </script>
+</head>
+
 Thank you for using the Princeton E-Club Career Website. Please submit your positing and expect it to be live within 2-3 days!
 
 <%= form_for(@posting) do |f| %>
+  <div>
 	<div class="new-posting-field">
 	  <%= f.label :title %>
 	  <%= f.text_field :title, :autofocus => true%>
 	</div>
-	<div class="new-posting-field">
+  <hr>
+  <div class="new-posting-field">
 	  <%= f.label :location %>
 	  <%= f.text_field :location %>
-    </div>
-    <div class="new-posting-field">
+  </div>
+  <hr>
+  <div class="new-posting-field">
 	  <%= f.label :description %>
 	  <%= f.text_field :description %>
-	</div>
+	</div> 
+  <hr>
 	<div class="new-posting-field">
-	  <%= f.label :ptype %>
-	  <%= f.text_field :ptype %>
+	  <%= f.label "Opportunity Type" %>
+    <%= select_tag(:ptype, options_for_select([['Full-Time', "full_time"], ['Part-Time', "part_time"], ['Internship', "internship"]])) %>
 	</div>
+  <hr>
+  <div class="new-posting-deadline">
+    <%= f.label :deadline %>
+    <input type="text" id="datepicker">
+  </div>
+  <hr>
   <%= f.button :submit %>
 <% end %> 

@@ -1,5 +1,5 @@
 class Posting < ActiveRecord::Base
-  validates_presence_of :title, :description, :location, :ptype # :deadline # TODO
+  validates_presence_of :title, :description, :location, :ptype, :deadline
   validate :check_ptype
 
   def check_ptype
