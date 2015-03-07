@@ -1,32 +1,36 @@
 Thank you for using the Princeton E-Club Career Website. Please submit your positing and expect it to be live within 2-3 days!
 
-<%= form_for(@posting) do |f| %>
-  <div>
-	<div class="new-posting-field">
-	  <%= f.label :title %>
-	  <%= f.text_field :title, :autofocus => true%>
-	</div>
-  <hr>
-  <div class="new-posting-field">
-	  <%= f.label :location %>
-	  <%= f.text_field :location %>
+<div class="full-page-form col-md-offset-3 col-md-6">
+  <center><h1 class="form-header">Submit an Opportunity</h1></center>
+  <div class="form">
+		<%= bootstrap_form_for(@posting) do |f| %>
+		  <%= f.alert_message "You cannot submit because of the following errors:" %>
+		  <div>
+			<div class="new-posting-field">
+			  <%= f.label :title %>
+			  <%= f.text_field :title, :autofocus => true, hide_label: true, placeholder: "Insert the Title of The Opportunity..."%>
+			</div>
+		  <hr>
+		  <div class="new-posting-field">
+			  <%= f.label :location %>
+			  <%= f.text_field :location, hide_label: true , placeholder: "Location of the Opportunity..."%>
+		  </div>
+		  <hr>
+		  <div class="new-posting-field">
+			  <%= f.label :description %>
+			  <%= f.text_area :description, hide_label: true, placeholder: "Insert a comprehensive description..." %>
+			</div> 
+		  <hr>
+			<div class="new-posting-field">
+			  <%= f.label "Opportunity Type" %>
+		    <%= f.select(:ptype, options_for_select([['Full-Time', "full_time"], ['Part-Time', "part_time"], ['Internship', "internship"]]), hide_label: true) %>
+			</div>
+		  <hr>
+		  <div class="new-posting-deadline">
+		    <%= f.label :deadline %>
+		    <%= f.date_select :deadline, hide_label: true %>
+		  </div>
+		  <hr>
+		  <%= submit_tag("Submit", :class => 'btn btn-large btn-primary') %>
+		<% end %> 
   </div>
-  <hr>
-  <div class="new-posting-field">
-	  <%= f.label :description %>
-	  <%= f.text_area :description %>
-	</div> 
-  <hr>
-	<div class="new-posting-field">
-	  <%= f.label "Opportunity Type" %>
-    <%= f.select(:ptype, options_for_select([['Full-Time', "full_time"], ['Part-Time', "part_time"], ['Internship', "internship"]])) %>
-	</div>
-  <hr>
-  <div class="new-posting-deadline">
-    <%= f.label :deadline %>
-    <%= f.date_select :deadline %>
-  </div>
-  <hr>
-  <%= submit_tag("Submit", :class => 'btn btn-large btn-primary longer') %>
-  <hr>
-<% end %> 
