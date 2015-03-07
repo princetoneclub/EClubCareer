@@ -2,28 +2,28 @@
 	height: 100px;
 }
 
-.postingLeft {
+.posting-left {
 	position: relative;
 	display: inline-block;
 	width: 300px;
 	height: 100px;
 }
 
-.title {
+.posting-title {
 	height: 30px;	
 }
 
-.description {
+.posting-description {
 	height: 45px;	
 }
 
-.tagBox {
+.posting-tagBox {
 	text-align: center;
 	width: 75px;
 	background-color: #ddd;
 }
 
-.location {
+.posting-location {
 	display: inline-block;
 	width: 150px;
 	height: 100px;
@@ -31,7 +31,7 @@
 	vertical-align: middle;
 }
 
-.date {
+.posting-date {
 	display: inline-block;
 	width: 50px;
 	height: 100px;
