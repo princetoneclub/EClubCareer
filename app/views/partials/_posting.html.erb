@@ -11,17 +11,7 @@
 
 			<div>
 				<div class="posting-tagbox <%= posting.ptype %>">
-					<% if posting.ptype == "full_time" %>
-					Full Time
-					
-
-					<% elsif posting.ptype == "part_time" %>
-					Part Time
-					
-					<% else posting.ptype == "internship" %>
-					Internship
-					
-					<% end %>
+					<%= get_opportunity_type(posting.ptype) %>
 				</div>
 			</div>
 		</div>	
