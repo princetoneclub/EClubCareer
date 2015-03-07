@@ -1,9 +1,8 @@
 <h1>Search Postings</h1>
-
-<div class="results"> 20 Results Found </div>
 <%= render partial: 'partials/search' %>
 
 <h1>Listing Postings</h1>
+<div class="results"> <%= @postings.length %> Results Found </div> <br>
 
 <%= will_paginate @postings %>
 <%= render partial: 'partials/posting', collection: @postings %>
