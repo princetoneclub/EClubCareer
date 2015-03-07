@@ -21,6 +21,7 @@ class PostingsController < ApplicationController
   def index
     @postings = Posting.search(params).paginate(:page => params[:page])
   end
+
   private
     def posting_params
       params.require(:posting).permit(:title, :location, :ptype, :description, :deadline)
