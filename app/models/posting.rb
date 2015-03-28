@@ -9,7 +9,7 @@ class Posting < ActiveRecord::Base
 	def self.search(params)
 		postings = self.all
 		postings = postings.where("deadline > ?", Time.now).order(:deadline)
-	  	postings = postings.where("title like ? ", "%#{params[:search]}%") if params[:search].present?
+	  	postings = postings.where("title like ? ", "%#{params[:title]}%") if params[:title].present?
 	  	postings = postings.where("ptype like ? ", "%#{params[:ptype]}%") if params[:ptype].present?
 		return postings
 	end

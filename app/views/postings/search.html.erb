@@ -1,1 +1,10 @@
-hello world
+<%= form_tag("/search", method: "get") do %>
+	<%= label_tag(:title, "Search for:") %>
+	<%= text_field_tag(:title) %>
+	<%= submit_tag("Search") %>
+<% end %>
+
+<% @postings.each do |posting| %>
+	<%= posting.title %>
+	<br>
+<% end %>
