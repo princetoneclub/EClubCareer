@@ -12,9 +12,9 @@ class Posting < ActiveRecord::Base
   	postings = postings.where("title like ? ", "%#{params[:title]}%") if params[:title].present?
   	postings = postings.where("location like ? ", "%#{params[:location]}%") if params[:location].present?
   	if params[:ptype].present?
-  	  postings = postings.where("ptype != 'full_time'") if params[:ptype]["full_time"] == "0"
-  	  postings = postings.where("ptype != 'part_time'") if params[:ptype]["part_time"] == "0"
-  	  postings = postings.where("ptype != 'internship'") if params[:ptype]["internship"] == "0"
+  	  postings = postings.where("ptype != 'full_time'") if params[:full_time] == "0"
+  	  postings = postings.where("ptype != 'part_time'") if params[:part_time] == "0"
+  	  postings = postings.where("ptype != 'internship'") if params[:internship] == "0"
   	end
   	return postings
   end

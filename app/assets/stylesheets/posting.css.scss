@@ -62,16 +62,10 @@
 }
 
 .search-box {
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 15px;
+	padding: 10px 15px;
 
 	background-color: $lightest-gray;
 	border-style: solid;
 	border-color: $light-gray;
 	width: 600px;
-}
-
-.longer {
-	width: 200px;
 }
