@@ -1,9 +1,7 @@
 <div class="posting">
 	<div class="posting-left"> 
 		<div class="posting-title">
-			<%= link_to(posting) do %>
-  				<b><%= posting.title %></b>
-			<% end %>
+			<%= link_to(posting.title, posting) %>
 		</div>
 
 		<div class="posting-description line-clamp">
@@ -15,7 +13,7 @@
 				<%= get_opportunity_type(posting.ptype) %>
 			</div>
 		</div>
-	</div>	
+	</div>
 
 	<div class="posting-location">
 		<%= posting.location %>

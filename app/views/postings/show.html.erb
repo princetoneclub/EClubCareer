@@ -1,1 +1,18 @@
-<%= @posting.title %>, <%= @posting.location %>, <%= @posting.deadline %>
+<div class="show-wrapper">
+	<div class="show-header">
+		<div class="show-title">
+			<h2><%= @posting.title %></h2>
+		</div>
+		<div class="show-details">
+			<div class="posting-tagbox <%= @posting.ptype %>">
+				<%= get_opportunity_type(@posting.ptype) %>
+			</div>
+			<%= @posting.location %>
+			<%= @posting.deadline.to_date.to_formatted_s(:long_ordinal) %>
+		</div>
+	</div>
+	<hr>
+	<div class="show-body">
+		<%= @posting.description %>
+	</div>
+</div>

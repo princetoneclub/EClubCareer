@@ -1,6 +1,5 @@
 @import "defaults";
 
-
 .posting {
 	height: 100px;
 	background-color: $lightest_gray;
@@ -18,7 +17,8 @@
 }
 
 .posting-title {
-	height: 30px;	
+	height: 30px;
+	font-weight: bold;
 }
 
 .posting-description {
@@ -26,6 +26,7 @@
 }
  
 .posting-tagbox {
+	display: inline-block;
 	text-align: center;
 	width: 75px;
 	border-radius: 8px;

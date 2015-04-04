@@ -3,3 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import "defaults";
+
+hr {
+	border-top: $dark_gray 1px solid;
+	border-bottom: white 1px solid;
+}
