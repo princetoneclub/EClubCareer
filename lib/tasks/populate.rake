@@ -11,7 +11,7 @@ def make_postings
     Posting.create(
       title: Faker::Name.title, 
       location: Faker::Address.city + ", " + Faker::Address.state_abbr, 
-      description: Faker::Lorem.paragraph(2), 
+      description: Faker::Lorem.paragraph(10), 
       deadline: Faker::Time.between(1.month.ago, Time.now + 1.month),
       ptype: "internship"
     )
@@ -21,7 +21,7 @@ def make_postings
     Posting.create(
       title: Faker::Name.title, 
       location: Faker::Address.city + ", " + Faker::Address.state_abbr, 
-      description: Faker::Lorem.paragraph(2), 
+      description: Faker::Lorem.paragraph(10), 
       deadline: Faker::Time.between(1.month.ago, Time.now + 1.month),
       ptype: "full_time"
     )
@@ -31,7 +31,7 @@ def make_postings
     Posting.create(
       title: Faker::Name.title, 
       location: Faker::Address.city + ", " + Faker::Address.state_abbr, 
-      description: Faker::Lorem.paragraph(2), 
+      description: Faker::Lorem.paragraph(10), 
       deadline: Faker::Time.between(1.month.ago, Time.now + 1.month),
       ptype: "part_time"
     )
