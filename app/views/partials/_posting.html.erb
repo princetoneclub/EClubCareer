@@ -1,7 +1,9 @@
 <div class="posting">
 	<div class="posting-left"> 
 		<div class="posting-title">
-			<b><%= posting.title %></b>
+			<%= link_to(posting) do %>
+  				<b><%= posting.title %></b>
+			<% end %>
 		</div>
 
 		<div class="posting-description line-clamp">
