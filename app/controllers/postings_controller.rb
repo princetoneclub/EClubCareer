@@ -23,6 +23,7 @@ class PostingsController < ApplicationController
   end
 
   private
+
     def posting_params
       params.require(:posting).permit(:title, :location, :ptype, :description, :deadline)
     end
