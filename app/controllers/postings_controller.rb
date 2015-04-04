@@ -8,7 +8,7 @@ class PostingsController < ApplicationController
 
     if @posting.save
       flash[:notice] = "Event Created!"
-      redirect_to confirmation_path(@posting)
+      redirect_to root_path
     else 
       render 'new'
     end
