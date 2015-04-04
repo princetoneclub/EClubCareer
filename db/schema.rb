@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141205234121) do
+ActiveRecord::Schema.define(version: 20150404232359) do
 
   create_table "postings", force: true do |t|
     t.string   "title"
     t.string   "location"
-    t.string   "description"
+    t.text     "description", limit: 65535
     t.datetime "deadline"
     t.datetime "created_at"
     t.datetime "updated_at"
