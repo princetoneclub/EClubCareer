@@ -1,3 +1,18 @@
+<%= form_tag("/", method: "get") do %>
+  <%= label_tag(:title, "Title:") %>
+  <%= text_field_tag(:title) %>
+  <%= label_tag(:location, "Location:") %>
+  <%= text_field_tag(:location) %>
+  <%= label_tag(:ptype, "Opportunity Type") %>
+  <%= label_tag(:ptype, "Full Time") %>
+  <%= check_box(:ptype, "full_time") %>
+  <%= label_tag(:ptype, "Part Time") %>
+  <%= check_box(:ptype, "part_time") %>
+  <%= label_tag(:ptype, "Internship") %>
+  <%= check_box(:ptype, "internship") %>
+  <%= submit_tag("Search") %>
+<% end %>
+
 <h1>Listing Postings</h1>
 
 <%= will_paginate @postings %>
