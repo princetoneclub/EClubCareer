@@ -2,7 +2,7 @@
 <%= render partial: 'partials/search' %>
 
 <h1>Listing Postings</h1>
-<div class="results"> <%= pluralize(@postings.length, "Result") %> Found </div> <br>
+<div class="results"> <%= pluralize(@results_found, "Result") %> Found </div> <br>
 
 <%= will_paginate @postings %>
 <%= render partial: 'partials/posting', collection: @postings %>
