@@ -19,7 +19,9 @@ class PostingsController < ApplicationController
   end
 
   def index
-    @postings = Posting.search(params).paginate(:page => params[:page])
+    searchpar = Posting.search(params)
+    @postings = searchpar.paginate(:page => params[:page])
+    @results_found = searchpar.length
   end
 
   private
