@@ -1,14 +1,14 @@
 <div class="search-box">
   <%= bootstrap_form_tag url: "/", method: "get" do |f| %>
-    <%= f.text_field(:title) %>
+    <%= f.text_field(:title, value: params[:title]) %>
 
     <%= f.form_group :ptype, label: { text: "Opportunity Type" } do %>
-        <%= f.check_box(:full_time, label: "Full Time") %>
-        <%= f.check_box(:part_time, label: "Part Time") %>
-        <%= f.check_box(:internship, label: "Internship") %>
+        <%= f.check_box(:full_time, label: "Full Time", checked: true) %>
+        <%= f.check_box(:part_time, label: "Part Time", checked: true) %>
+        <%= f.check_box(:internship, label: "Internship", checked: true) %>
     <% end %>
 
-    <%= f.text_field(:location) %>
+    <%= f.text_field(:location, value: params[:location]) %>
     <%= f.submit("Search") %>
   <% end %>
 </div>
